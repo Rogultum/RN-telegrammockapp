@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "firstName": "Json",
+    "lastName": "Momoa",
+    "username": "jboy"
+  },
+  {
+    "id": 2,
+    "firstName": "Ankara",
+    "lastName": "Metro",
+    "username": "Fena Değil"
+  },
+  {
+    "id": 3,
+    "firstName": "İstanbul ",
+    "lastName": "Boğaz",
+    "username": "Güzel"
+  },
+  {
+    "id": 4,
+    "firstName": "Eskişehir",
+    "lastName": "Porsuk",
+    "username": "Normal"
+  },
+  {
+    "id": 5,
+    "firstName": "Bursa",
+    "lastName": "Nilüfer",
+    "username": "güzeldiyorlar"
+  }
+]
