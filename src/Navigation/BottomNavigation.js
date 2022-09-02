@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 /* eslint-disable no-unused-expressions */
 
 /* eslint-disable react/prop-types */
@@ -11,11 +13,11 @@ import ContactsScreen from '../Screens/ContactsScreen';
 import MessagesScreen from '../Screens/MessagesScreen';
 import SettingsScreen from '../Screens/SettingsScreen';
 import UserScreen from '../Screens/UserScreen';
+import SettingsNavigation from './SettingsNavigation';
 
 const BottomNav = createBottomTabNavigator();
 
 function headRight() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigation = useNavigation();
   return (
     <Text
@@ -33,7 +35,7 @@ function BottomNavigation({ route }) {
   const { user } = route.params;
   return (
     <BottomNav.Navigator>
-      <BottomNav.Screen
+      {/* <BottomNav.Screen
         name="ChatList"
         component={UserScreen}
         options={{
@@ -42,14 +44,32 @@ function BottomNavigation({ route }) {
             null;
           },
         }}
-      />
+      /> */}
       <BottomNav.Screen
         name="Contacts"
         component={ContactsScreen}
         options={{ headerRight: headRight }}
       />
-      <BottomNav.Screen name="Messages" component={MessagesScreen} />
-      <BottomNav.Screen name="Settings" component={SettingsScreen} />
+      <BottomNav.Screen
+        name="Messages"
+        component={MessagesScreen}
+        options={{ headerRight: headRight }}
+      />
+      <BottomNav.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{ headerRight: headRight }}
+      />
+      <BottomNav.Screen
+        name="SettingsNavigation"
+        component={SettingsNavigation}
+        options={{
+          headerShown: false,
+          tabBarButton: () => {
+            null;
+          },
+        }}
+      />
     </BottomNav.Navigator>
   );
 }
