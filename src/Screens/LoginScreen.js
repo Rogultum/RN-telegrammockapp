@@ -20,7 +20,7 @@ function LoginScreen() {
   const [username, setUsername] = useState(null);
 
   function handleSignIn() {
-    const userInfo = setUser({
+    setUser({
       phoneNumber: userPhoneNumber,
       firstName: userFirstName,
       lastName: userLastName,
